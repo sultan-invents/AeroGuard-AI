@@ -44,3 +44,14 @@ Gemma 4 processes this information and generates:
 - Decision-support insights
 
 ## System Architecture
+User
+ |
+AeroGuard AI Interface
+ |
+Image/Text Input
+ |
+Gemma 4 AI Engine
+ |
+Analysis & Recommendations
+ |
+Emergency Response Report
