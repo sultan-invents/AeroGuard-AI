@@ -4,3 +4,7 @@ google-genai
 Pillow
 opencv-python
 numpy
+streamlit
+pillow
+python-dotenv
+google-genai
