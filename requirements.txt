@@ -1,6 +1,6 @@
 streamlit
+python-dotenv
+google-genai
+Pillow
 opencv-python
-pillow
-transformers
-torch
-accelerate
+numpy
