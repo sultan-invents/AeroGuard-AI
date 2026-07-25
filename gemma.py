@@ -19,7 +19,7 @@ def analyze_disaster(prompt, image=None):
         contents.append(img)
 
     response = client.models.generate_content(
-        model="gemma-3-27b-it",
+        model="gemma-3-27b",
         contents=contents
     )
 
