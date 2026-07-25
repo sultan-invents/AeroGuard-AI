@@ -154,7 +154,8 @@ Emergency Report:
                 st.error("Analysis failed.")
 
                 st.exception(e)
-                # -----------------------------
+            
+# -----------------------------
 # FOOTER
 # -----------------------------
 
