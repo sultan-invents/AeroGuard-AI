@@ -1,19 +1,25 @@
+import os
 from google import genai
-from config import GEMMA_API_KEY, MODEL_NAME
+from PIL import Image
+
+from config import GEMMA_API_KEY
+
 
 client = genai.Client(
     api_key=GEMMA_API_KEY
 )
+
 
 def analyze_disaster(prompt, image=None):
 
     contents = [prompt]
 
     if image:
-        contents.append(image)
+        img = Image.open(image)
+        contents.append(img)
 
     response = client.models.generate_content(
-        model=MODEL_NAME,
+        model="gemma-3-27b-it",
         contents=contents
     )
 
