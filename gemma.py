@@ -1,7 +1,4 @@
-import os
 from google import genai
-from PIL import Image
-
 from config import GEMMA_API_KEY
 
 
@@ -12,15 +9,11 @@ client = genai.Client(
 
 def analyze_disaster(prompt, image=None):
 
-    contents = [prompt]
+    models = client.models.list()
 
-    if image:
-        img = Image.open(image)
-        contents.append(img)
+    available = []
 
-    response = client.models.generate_content(
-        model="gemma-3-27b",
-        contents=contents
-    )
+    for model in models:
+        available.append(model.name)
 
-    return response.text
+    return "\n".join(available)
