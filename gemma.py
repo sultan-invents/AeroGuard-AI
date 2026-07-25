@@ -11,9 +11,9 @@ def analyze_disaster(prompt, image=None):
 
     models = client.models.list()
 
-    available = []
+    names = []
 
     for model in models:
-        available.append(model.name)
+        names.append(model.name)
 
-    return "\n".join(available)
+    return "\n".join(names)
